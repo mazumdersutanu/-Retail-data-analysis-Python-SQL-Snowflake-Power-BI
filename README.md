@@ -1,4 +1,4 @@
-# 📊 End-to-End Reatil Data Analytics Project (Python | SQL | Snowflake | Power BI)
+# 📊 Retail Customer Trends Analysis: From Raw Data to Business Insights (Python | SQL | Snowflake | Power BI)
 
 This repository contains a complete end-to-end data analytics pipeline, inspired by real-world enterprise workflows.
 The project covers everything from data modeling  to cloud data warehousing, SQL analysis, and interactive dashboard creation.
