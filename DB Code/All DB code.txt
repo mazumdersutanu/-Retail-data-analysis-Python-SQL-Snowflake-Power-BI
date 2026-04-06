@@ -1,0 +1,89 @@
+-- Dimension Table: Dim_Store
+
+CREATE TABLE DIMCUSTOMER (
+    CustomerID  INT PRIMARY KEY,  
+    FirstName  VARCHAR(50),
+    LastName  VARCHAR(50),
+    Gender  VARCHAR(20),
+    DateOfBirth  DATE,
+    Email  VARCHAR(100),
+    PhoneNumber  VARCHAR(20),
+    Address  VARCHAR(255),
+    City  VARCHAR(50),
+    State  VARCHAR(50),
+    PostalCode  VARCHAR(10),
+    Country  VARCHAR(50),
+);
+
+-- Dimension Table: Dim_Date
+
+CREATE TABLE DIMDATE (
+    DateID INT PRIMARY KEY,
+    FullDate  DATE,
+    DayOfWeek VARCHAR(15),
+    DayNumber  INT,
+    Month  VARCHAR(15),
+    MonthNumber INT,
+    Quarter   INT,
+    YearNum   INT,
+    IsWeekend  BOOLEAN
+);
+
+-- Dimension Table: Dim_Product
+
+CREATE TABLE DimProduct (
+    ProductID INT PRIMARY KEY autoincrement start 1 increment 1,
+    ProductName VARCHAR(100),
+    Category VARCHAR(50),
+    SubCategory VARCHAR(50),        
+    Brand VARCHAR(50),
+    UnitPrice DECIMAL(10, 2)
+);
+
+-- Dimension Table: Dim_Store
+
+CREATE TABLE DIMSTORE (
+    StoreID  INT PRIMARY KEY,   
+    StoreName  VARCHAR(100),
+    StoreType  VARCHAR(50),
+    StoreOpeningDate DATE,
+    Address  VARCHAR(255),
+    City    VARCHAR(50),
+    State   VARCHAR(50),
+    PostalCode   VARCHAR(10),
+    Country  VARCHAR(50),
+    Region   VARCHAR(20),
+    ManagerName  VARCHAR(100)
+);
+
+-- Dimension Table: Dim_Loyalty_Program
+
+CREATE TABLE DimLoyaltyProgram (
+    LoyaltyProgramID INT PRIMARY KEY,
+    ProgramName VARCHAR(100),
+    ProgramTier VARCHAR(50),        
+    DiscountPercent DECIMAL(5,2),   
+    PointsAccrued INT
+);
+
+-- Dimension Table: Factorders
+
+CREATE TABLE FactOrders (
+    OrderID INT PRIMARY KEY autoincrement start 1 increment 1,
+    DateID INT,
+    CustomerID INT,
+    ProductID INT,
+    StoreID INT,
+    LoyaltyProgramID INT,           
+    QuantityOrdered INT,
+    OrderAmount DECIMAL(10, 2),
+    DiscountAmount DECIMAL(10, 2),
+    ShippingCost DECIMAL(10, 2),
+    TotalAmount DECIMAL(10, 2),
+
+    FOREIGN KEY (DateID) REFERENCES DimDate(DateID),
+    FOREIGN KEY (CustomerID) REFERENCES DimCustomer(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES DimProduct(ProductID),
+    FOREIGN KEY (StoreID) REFERENCES DimStore(StoreID),
+    FOREIGN KEY (LoyaltyProgramID) REFERENCES DimLoyaltyProgram(LoyaltyProgramID)
+);
