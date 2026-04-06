@@ -44,3 +44,5 @@ Used Power Query for transformation
 Built a dashboard blueprint
 Created a clean & optimized data model
 Designed interactive visuals and final report
+
+https://github.com/mazumdersutanu/-Retail-data-analysis-Python-SQL-Snowflake-Power-BI/blob/main/Retail%20Data%20Analytics.png
