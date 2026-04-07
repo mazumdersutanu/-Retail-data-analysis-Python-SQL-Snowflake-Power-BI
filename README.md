@@ -45,4 +45,4 @@ Built a dashboard blueprint
 Created a clean & optimized data model
 Designed interactive visuals and final report
 
-https://github.com/mazumdersutanu/-Retail-data-analysis-Python-SQL-Snowflake-Power-BI/blob/main/Retail%20Data%20Analytics.png
+![image alt] (https://github.com/mazumdersutanu/-Retail-data-analysis-Python-SQL-Snowflake-Power-BI/blob/d1d7bef34a0024ee55a68898f5d536e9e67c2edc/Retail%20Data%20Analytics.png)
