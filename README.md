@@ -35,7 +35,7 @@ Loaded CSV data into Snowflake using COPY INTO
 Connected Snowflake with Power BI
 
 4. 🛢 SQL Analytics-
-Wrote complex SQL queries for analysis
+Wrote  SQL queries for analysis
 Solved business scenarios
 Used WITH Clause (CTEs) for readable SQL pipelines
 
